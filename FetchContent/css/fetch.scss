@@ -1,14 +1,11 @@
 @use "sass:math";
-// 変数
-$z-index-header             : 100;
-$z-index-headerIcon         : 110;
-$z-index-pageListToggle     : 120;
 #header{
     width: 100%;
 }
 .header {
+    position: absolute;
     font-family: 'Varela Round', sans-serif;
-    z-index: $z-index-header;
+    z-index: 100;
     display: block;
     top: 0;
     right: 0;
@@ -26,7 +23,7 @@ $z-index-pageListToggle     : 120;
         right: 0;
         display: flex;
         position: absolute;
-        z-index: $z-index-pageListToggle;
+        z-index: 101;
         .pageListToggleText{
             top: 0;
             margin: 0 auto;
@@ -55,7 +52,7 @@ $z-index-pageListToggle     : 120;
     width: 180px;
     padding: 10px;
     margin: 0;
-    z-index: 1000;
+    z-index: 102;
     right: 0;
     .pageList{
         margin: 0;
