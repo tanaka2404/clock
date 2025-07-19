@@ -3,19 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>clock</title>
+        <title>時計</title>
+        <link rel="stylesheet" href="FetchContent/css/fetch.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="sidebar/sidebar.css">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <div id="headerSidebar"></div>
+        <div id="header"></div>
         <div class="main" id="maincontent" >
             <div class="clock">
                 <span id="main"></span>
                 <span id="second"></span>
             </div>
         </div>
-        <script src="index.js"></script>
-        <script src="sidebar/sidebar.js"></script>
+        <div class="toggleHeaderVisible">↑</div>
+        <div class="smallAlert">
+            <h1>画面を横向きにしてください</h1>
+        </div>
+        <script src="js/clock.js"></script>
+        <script src="FetchContent/js/header.js"></script>
+        <script src="js/main/headerHide.js"></script>
     </body>
 </html>

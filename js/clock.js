@@ -1,4 +1,11 @@
+window.onload = function(){
+    clock();
+}
 setInterval(() => {
+    clock();
+}, 1000);
+
+function clock(){
     let jikan = new Date();
     let clock = document.getElementById('main');
     let cl2 = document.getElementById('second');
@@ -14,4 +21,4 @@ setInterval(() => {
     if (minutes <= 9){minutes   = '0' + minutes   }
     if (seconds <= 9){seconds   = '0' + seconds;  }
     clock.innerHTML = `<h1>${year}:${month}:${date}</h1>` + "<br>" + `<h1>${hours}:${minutes}:${seconds}</h1>`;
-}, 1000);
+}
