@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
 html, body {
+  font-family: "Varela Round", sans-serif;
   overflow-x: hidden;
   position: relative;
   width: 100%;
