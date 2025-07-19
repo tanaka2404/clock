@@ -37,10 +37,6 @@
     transform: translateY(-100%);
 }
 .headPageList{
-    transition: all 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -48,10 +44,14 @@
     border: 1px solid gray;
     border-top: none;
     border-right: none;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
     background-color: white;
     width: 180px;
     padding: 10px;
-    margin: 0;
+    margin-top: 62px;
     z-index: 102;
     right: 0;
     .pageList{
