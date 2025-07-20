@@ -8,11 +8,13 @@ array.forEach(function(value) {
 let designMode = document.getElementById('designMode');
 designMode.addEventListener('change', (e) => {
     if(designMode.value == "light"){
+        document.cookie = "Theme=light; max-age=0";
         document.cookie = 'Theme=light';
         document.documentElement.style.setProperty('--default-black', 'black');
         document.documentElement.style.setProperty('--default-white', 'white');
         console.log("light");
     }else if(designMode.value == "dark"){
+        document.cookie = "Theme=dark; max-age=0";
         document.cookie = 'Theme=dark';
         document.documentElement.style.setProperty('--default-black', 'white');
         document.documentElement.style.setProperty('--default-white', 'black');
