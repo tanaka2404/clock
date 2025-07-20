@@ -1,3 +1,9 @@
+:root {
+  --default-black: black;
+  --default-white: white;
+  --default-gray: gray;
+}
+
 html, body {
   overflow-x: hidden;
   position: relative;
@@ -9,7 +15,7 @@ html, body {
 body {
   padding: 0;
   margin: 0;
-  background-color: #FFF;
+  background-color: var(--default-white);
   overflow-y: hidden;
 }
 
@@ -30,6 +36,7 @@ body {
   font-size: calc(5vw + 1.5rem);
   line-height: 0;
   text-align: center;
+  color: var(--default-black);
 }
 
 .smallAlert {
@@ -42,14 +49,14 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  background-color: black;
+  background-color: var(--default-black);
   opacity: 60%;
   display: grid;
   place-items: center;
 }
 .smallAlert h1 {
   font-size: calc(3vw + 1.5rem);
-  color: white;
+  color: var(--default-white);
   position: absolute;
 }
 
@@ -67,10 +74,77 @@ body {
   font-size: 30px;
   transition: all 0.5s;
   z-index: 101;
+  color: var(--default-black);
 }
 
 .toggleHeaderClicked {
   transform: translateY(-60px) rotate(-180deg);
+}
+
+.setting {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 270px;
+  height: 100px;
+  transition: all 0.5s;
+  transform: translateX(calc(100% - 15px));
+}
+.setting .toggleSettingVisible {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 15px;
+  height: 50px;
+  transform: translateY(50%);
+  margin-right: 17px;
+  border: 2px solid var(--default-gray);
+  border-right: none;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.setting .toggleSettingVisible .toggleSettingPart1 {
+  background-color: var(--default-black);
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  transition: all 0.5s;
+  background-color: var(--default-black);
+  transform: rotate(-45deg);
+  top: 21.15px;
+}
+.setting .toggleSettingVisible .toggleSettingPart2 {
+  background-color: var(--default-black);
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  transition: all 0.5s;
+  background-color: var(--default-black);
+  bottom: 21.15px;
+  transform: rotate(45deg);
+}
+.setting .settingMain {
+  position: absolute;
+  margin: 0;
+  right: 0;
+  width: 250px;
+  height: 100px;
+  color: var(--default-black);
+  border: 2px solid var(--default-gray);
+  background-color: var(--default-white);
+}
+
+.settingVisible {
+  transform: translateX(0);
+}
+
+.toggleSettingVisible-Rotate1 {
+  transform: rotate(45deg) !important;
+}
+
+.toggleSettingVisible-Rotate2 {
+  transform: rotate(-45deg) !important;
 }
 
 @media screen and (max-width: 560px) {
