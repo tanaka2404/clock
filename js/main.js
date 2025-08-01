@@ -79,7 +79,7 @@ function clock() {
     const mode = document.getElementById('ClockNotation')?.value || "all";
 
     if (clockDiv) {
-        if (mode === "all") {
+        if (mode == "all") {
             clockDiv.innerHTML = `<h1>${year}:${month}:${date}</h1><br><h1>${hours}:${minutes}:${seconds}</h1>`;
         } else {
             clockDiv.innerHTML = `<h1>${hours}:${minutes}:${seconds}</h1>`;
@@ -93,6 +93,7 @@ function CNAll() {
     if (document.getElementById('ClockNotation')) {
         document.getElementById('ClockNotation').value = "all";
     }
+    clock();
 }
 
 // クッキー設定関数（時間のみ表示）
@@ -101,6 +102,7 @@ function CNhms() {
     if (document.getElementById('ClockNotation')) {
         document.getElementById('ClockNotation').value = "hmsOnly";
     }
+    clock();
 }
 function light(){
     document.cookie = 'Theme=light';
